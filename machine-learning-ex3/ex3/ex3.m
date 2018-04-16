@@ -39,7 +39,7 @@ m = size(X, 1);
 rand_indices = randperm(m);
 sel = X(rand_indices(1:100), :);
 
-displayData(sel);
+% displayData(sel);
 
 fprintf('Program paused. Press enter to continue.\n');
 % pause;
@@ -69,13 +69,14 @@ fprintf('Expected gradients:\n');
 fprintf(' 0.146561\n -0.548558\n 0.724722\n 1.398003\n');
 
 fprintf('Program paused. Press enter to continue.\n');
-pause;
+%pause;
 %% ============ Part 2b: One-vs-All Training ============
 fprintf('\nTraining One-vs-All Logistic Regression...\n')
 
 lambda = 0.1;
 [all_theta] = oneVsAll(X, y, num_labels, lambda);
 
+fprintf('theta: %f', size(all_theta));
 fprintf('Program paused. Press enter to continue.\n');
 pause;
 
